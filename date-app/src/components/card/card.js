@@ -28,13 +28,18 @@ function Card() {
     const gnome = allGnomes[currentGnomeIndex];
 
     return (
-        <div className="d-flex flex-column  w-100 align-items-center">
+        <div className="d-flex flex-column mt-5 w-100 align-items-center border">
+            <div className="card p-3">
+                <h5>{gnome.description.toUpperCase()}</h5>
             <img src={gnome.file} className="d-block" style={{width: "200px", height: "200px"}} alt={gnome.description} />
             <div>
-                <h5>{gnome.description}</h5>
                 <p>{gnome.price} kr</p>
             </div>
-            <button onClick={nextGnome}>Next</button>
+            <div className="d-flex flex-row justify-content-between">
+            <button className="btn btn-secondary"onClick={nextGnome}>No</button>
+            <button className="btn btn-secondary"onClick={nextGnome}>Yes</button>
+</div>  
+        </div>
         </div>
     ); 
 }

@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
+import User from './components/user/user.js';
 import Card from './components/card/card.js';
 import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
 import bootstrapjs from 'bootstrap/dist/js/bootstrap.min.js';
@@ -14,7 +15,7 @@ function App() {
   return (
     <div >
     <header>
-    {/* <Router> */}
+    {/* <Router>  */}
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
     <div className="container">
     <h3 className="navbar-brand">My App</h3>
@@ -30,13 +31,14 @@ function App() {
       </div>
     </div>
   </nav>
-    {/* <Routes> */}
-      {/* <Route path="/" element={<Card />}/>                 */}
+  <User />
+   {/* <Routes>
+      <Route path="/" element={<Card />}/>                
      <Card />
-
+   
   
 
-  {/* </Routes>
+ </Routes>
   </Router> */}
 
     </header>

@@ -54,7 +54,7 @@ function Card(props) {
                 </ul>
             </div>
             <div className="d-flex flex-column mt-5 w-100 align-items-center border">
-                <h1>{showMatch ? `You matched with ${lastMatchedGnome.description}` : "Do you like this gnome?"}</h1>
+                <h1>{showMatch ? `You matched with ${lastMatchedGnome.description.toUpperCase()}!` : "Do you like this gnome?"}</h1>
                 
                 <div className="card p-3">
                     <h5>{showMatch ? "" : gnome.description.toUpperCase()}</h5>

@@ -5,7 +5,7 @@ import User from './components/user/user.js';
 import Card from './components/card/card.js';
 import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
 import bootstrapjs from 'bootstrap/dist/js/bootstrap.min.js';
-// import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   return (
     <div >
     <header>
-    {/* <Router>  */}
+    <Router> 
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
     <div className="container">
     <h3 className="navbar-brand">My App</h3>
@@ -25,21 +25,24 @@ function App() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
+            <Link to="/card" className="nav-link active" aria-current="page">Home</Link>
           </li>
-      
+          <li className="nav-item">
+            <Link to="/user" className="nav-link active" aria-current="page">User</Link>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
-  <User />
-   {/* <Routes>
-      <Route path="/" element={<Card />}/>                
-     <Card />
+   <Routes>
+      <Route path="/user" element={<User />} />
+      <Route path="/card" element={<Card />}/>                
+     {/* <Card /> */}
    
   
 
  </Routes>
-  </Router> */}
+  </Router>
 
     </header>
   </div>

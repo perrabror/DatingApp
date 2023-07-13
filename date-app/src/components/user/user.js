@@ -1,3 +1,6 @@
+import React from "react";
+import {Link} from "react-router-dom";
+
 function User() {
 
     return (
@@ -29,7 +32,7 @@ function User() {
   </div>
 </div>
 <   input className="m-1"type = "text" placeholder = "Age" />
-<button className="btn w-50 p-2 bg-success text-light">Enter Gnomeland</button>
+<Link className="btn w-50 p-2 bg-success text-light" to="/card">Enter Gnomeland</Link>
             </form>
         </div>
     )

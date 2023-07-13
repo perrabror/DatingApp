@@ -37,7 +37,7 @@ function App() {
    <Routes>
       <Route path="/user" element={<User />} />
       <Route path="/card" element={<Card />}/>                
-     {/* <Card /> */}
+     
    
   
 

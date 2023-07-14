@@ -34,7 +34,7 @@ function User() {
 
   const handleRangeChange = (event) => {
     const value = event.target.value;
-    event.target.nextElementSibling.value = value;
+    event.target.nextElementSibling.value = " " + value + " cm";
   };
 
   return (
@@ -76,6 +76,7 @@ function User() {
         <Link className="btn w-50 p-2 bg-success text-light" to="/card" onClick={ handleFormSubmit} disabled={!isFormValid}>
           Enter Gnomeland
         </Link>
+        
         
       </form>
     </div>

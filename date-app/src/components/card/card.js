@@ -15,7 +15,7 @@ const allGnomes = [
     { id: 6,file: summerGnome, description: "Double Summer", bio: "Hej där! Jag är en passionerad skrattentusiast som älskar att få folk att spruta ut kaffe genom näsan av skratt.", price: 80 }
 ]
 
-function Card(props) {
+function Card() {
     const [currentGnomeIndex, setCurrentGnomeIndex] = useState(0);
     const [prospects, setProspects] = useState([]);
     const [lastMatchedGnome, setLastMatchedGnome] = useState(null);
@@ -56,29 +56,28 @@ function Card(props) {
     ))}
 </ul>
 </div>
-            <div className="d-flex flex-column w-100 align-items-center ">
+            <div className="d-flex flex-column w-100 align-items-center mt-2">
                 <h1 className="text-light">{showMatch ? `You matched with ${lastMatchedGnome.description}!` : "Do you like this gnome?"}</h1>
                 
-                <div style={{width: "250px", height: "400px", opacity: "0.9", }}className="card p-3">
+                <div style={{width: "250px", height: "450px", opacity: "0.9", }}className="card p-3 ">
                     <h5 className="text-center">{showMatch ? "" : gnome.description.toUpperCase()}</h5>
-                    <img src={showMatch ? match : gnome.file} style={{width: "200px", height: "200px", boxShadow: "0px 1px 1px 1px"}}className="d-block object-fit-scale rounded"  alt={gnome.description} />
-                    <div style={{margin: "0", width: "", height:"60%", overflow: "hidden",  }}className="text-left p-3">
+                    <img src={showMatch ? match : gnome.file} style={{width: "200px", height: "200px", boxShadow: "0px 1px 1px 1px"}}className="d-block object-fit-scale rounded "  alt={gnome.description} />
+                    <div style={{margin: "0", width: "", height:"60%", overflow: "hidden",  }}className="text-left p-3 position-relative">
                         <p>{showMatch ? "Grab a beer and build some confidence. Gnomes love people with confidence." : gnome.bio }</p>
-                        </div>
-                    <div className="position-relative ">
                         {showMatch ? (
                             <button className="mt-4 position-absolute top start-50 translate-middle btn btn-success" onClick={() => nextGnome(false)}>
                             Continue
                         </button>
                         ) : (
                             <>
-                        <button className="position-absolute top-0 start-0 btn btn-secondary " style={{border: "2px solid lightgrey"}}onClick={() => nextGnome(false)}>No</button>
-                        <button className="position-absolute end-0 top-0 btn btn-secondary" onClick={() => nextGnome(true)}>Yes</button>
+                        <button className="position-absolute  start-0 btn btn-secondary " style={{marginTop: "10px", border: "2px solid lightgrey"}}onClick={() => nextGnome(false)}>No</button>
+                        <button className="position-absolute end-0 btn btn-secondary" style={{marginTop: "10px", border: "2px solid lightgrey"}}onClick={() => nextGnome(true)}>Yes</button>
                         </>)}
+                            </div>
                         </div>  
                 </div>
             </div>
-        </div>
+        
     ); 
 }
 
